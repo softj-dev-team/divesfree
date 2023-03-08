@@ -1,20 +1,18 @@
-
+server:
+  servlet:
+    context-path: /api
 springdoc:
+#  version: '@springdoc.version@'
+  api-docs:
+    groups:
+      enabled: true
   swagger-ui:
     path: /swagger-ui.html
-  api-docs:
-    enabled: true
-  #    groups:
-  #      users:
-  #        paths-to-match: /users/**
-  #      stores:
-  #        paths-to-match: /stores/**
+    display-request-duration: true
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
   show-actuator: true
-#  group-configs:
-#    - group: users
-#      packages-to-scan: org.example.demo.users
-#    - group: stores
-#      packages-to-scan: org.example.demo.stores
 spring:
   datasource:
     url: "jdbc:mariadb://localhost:3306/divesfree?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul"
