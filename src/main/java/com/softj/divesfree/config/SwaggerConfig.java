@@ -17,4 +17,5 @@ public class SwaggerConfig  extends WebMvcConfigurationSupport {
                         .version("1.0.0")
                         .description("API for My Application"));
     }
+
 }
