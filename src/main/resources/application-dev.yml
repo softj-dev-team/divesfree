@@ -1,9 +1,32 @@
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true
+  #    groups:
+  #      users:
+  #        paths-to-match: /users/**
+  #      stores:
+  #        paths-to-match: /stores/**
+  show-actuator: true
+#  group-configs:
+#    - group: users
+#      packages-to-scan: org.example.demo.users
+#    - group: stores
+#      packages-to-scan: org.example.demo.stores
 spring:
   datasource:
-    url: 'jdbc:mariadb://localhost:3306/divesfree'
+    url: "jdbc:mariadb://localhost:3306/divesfree?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul"
     username: 'divesfree'
     password: '!1qazsoftj'
 #springdoc.swagger-ui.path: '/swagger-ui.html'
-server:
-  servlet:
-    context-path: /api
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    logging:
+      level:
+        org.hibernate.SQL: debug
+        org.hibernate.type.descriptor.sql: trace
