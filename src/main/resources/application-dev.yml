@@ -4,3 +4,6 @@ spring:
     username: 'divesfree'
     password: '!1qazsoftj'
 #springdoc.swagger-ui.path: '/swagger-ui.html'
+server:
+  servlet:
+    context-path: /api
